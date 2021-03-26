@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electronics Design</title>
+    <link href="css/foundation.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/icon-fonts.css" rel="stylesheet" />
+    <link href="css/hover.css" rel="stylesheet" />
+    <link href="css/footer-bottom.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/color.css" rel="stylesheet" />
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <section id="main-content">
+
+            <!-- Main Page Content and Sidebar -->
+
+            <div class="row">
+
+                <!-- Main Blog Content -->
+                <div class="large-12 columns" role="content">
+
+                    <article>
+
+                        <h2><a href="#">Electronics Design</a></h2>
+                        <p class="article_pub-date">By: Debasis Parida on:
+                            <time datetime="2021-02-13" pubdate="">Mar 27 2021</time>
+                        </p>
+
+                        <div class="row">
+                            <div class="large-12 columns">
+                               
+                                <p>
+                                  This week we had to design a "Hello World" Electronic PCB or a Basic Microcontroller board interfaced with a Button or LED to do some basic operations like LED blinking, Button debouncing etc. I am planning to use Eagle PCB design tool to design a circuit of ESP01 WiFi module which can be interfaced a LED to do some Digital Output operations.</p>
+
+                                <p><b>Eagle PCB design</b></p>
+
+                                <p>
+                                  EAGLE is electronic design automation (EDA) software that lets printed circuit board (PCB) designers seamlessly connect schematic diagrams, component placement, PCB routing, and comprehensive library content. Here i have used the free version of Eagle software to design my PCB. </p>
+
+                                  <ul>
+
+                                  <li>Designing schematic of the design
+                                  <li>Drawing the layout for the Printed Circuit Board (PCB) 
+                                  <li>Making the board</p>
+                                </ul>
+
+                                  <p><b>Schematic Design</b>
+
+                                  	<p>The first step to design a PCB is to create a Schematic diagram, which is nothing but the circuit diagram of the PCB which want to make.
+
+                                    So first i opened Eagle and Click on File and select New Project. Rename the Project to an appropriate name.Right click on the project and create new schematic. </p>
+
+                                    <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/2.png" />
+                                <img style="width: 45%; height: 45%;"class="float-right" src="assets/img/doc/week6/1.png" />   
+
+                              </div>
+
+                                <p>
+                              In Eagle schematic, first we need to add all the required components which are required to make the circuit using "add" command. Make sure that, the footprints are same which your required.If the component is not available in eagle, we can also add external library and footprint and import it.After placing all the required components i had to connect them as per circuit diagram using "wire" command. In case we need to wire a very complex diagram we can use "netlist" feature of Eagle, which helps us to simplify and schematic connections.In net listing we use "label" and "name" command to do the net listing.
+                                </p>
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/3.png" />
+                                <img style="width: 45%; height: 45%;"class="float-right" src="assets/img/doc/week6/4.png" />
+
+                                </div>
+
+                                <p>
+                               After completing the schematic, we have to proceed with the design of the PCB layout. Select the switch to board option from the top tool bar. We can create the board fie from the schematic. It will ask for confirmation, after which we need to place our components as per our schematic. We can use "move" command to move the components or "delete" command to delete any unwanted object. After placing the components, we can create the outline boundary as per our dimension. for this we have to select "layer 20" in the upper taskbar and click "wire" command to draw the outline.
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/5.png" />
+                                <img style="width: 45%; height: 45%;"class="float-right" src="assets/img/doc/week6/6.png" />
+
+                                </div>
+
+                                <p>
+                                	Finally, we have to draw the trace in the PCB. We can do this using "route" command, selecting the layer (Buttom layer in my case) and selecting the proper trace width in "mils". This task is an artistic task,as we need to draw track to without cross jumping of traces. Finally, if any wire is kept untraced, we can then use vias to connect jumper from the Top layer.After connecting all the traces, i have poured a copper layer in my PCB to save time. For this i used the polygon tool to draw the outline in "layer20" and then use ratnest tool to pour the copper.
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/7.png" />
+                                <img style="width: 45%; height: 45%;"class="float-right" src="assets/img/doc/week6/8.png" />
+
+                                </div>
+
+                                <div class="large-12 columns">
+
+                                <p>
+                                After completion of the PCB design now we have to mill it using SRM20 PCB milling machine.For that, i exported the PCB design create in EAGLE with only buttom layer, drills and vias selected to PNG. Then i edited it in GIMP to find the trace and cut files as follows.
+                                </p>
+
+
+                                <img style="width: 25%; height: 25%;"class="float-left" src="assets/img/doc/week6/10.png" />
+                                <img style="width: 25%; height: 25%;"class="float-left" src="assets/img/doc/week6/9.png" />
+
+                              </div>
+
+                              <a href="index.html">Back to Home</a>
+
+                        
+                    </article>
+
+                    <hr />
+
+</body>
+
+</html>
