@@ -221,6 +221,7 @@
                                 <li>
                                   Run "make" command in terminal which will create a hex file inside the code directory named "fts_firmware.hex".
                                 </li>
+                                 <img style="width: 60%; height: 60%;"src="assets/img/doc/week4/30.jpeg"/>
                                 <li>
                                   Now i updated the Makefile for the type of programmer we are going to use to program your board.By default, it assumes that we are using a usbtiny which is another FabISP board.In my case i have used a "usbasp" programmer.This can be edited in the line of "Makefile" as shown and save the file.<br><br>
 
@@ -236,10 +237,15 @@
                                   Now run "make flash" command in the terminal which should run successfully and it will flash the .hex file into the programmer.
                                 </li>
 
+                                <img style="width: 60%; height: 60%;"src="assets/img/doc/week4/32.jpeg"/>
+
 
                                 <li>
                                   The,run "make fuses" command in the terminal which should run successfully and it will set all the fuses except Reset disable pin in the programmer.
                                 </li>
+
+                                <img style="width: 60%; height: 60%;"src="assets/img/doc/week4/33.jpeg"/>
+
 
                                 </p>
 
@@ -249,6 +255,9 @@
                                 
                                 After completing all the above steps now it's time to test the FABISP. For this i connected the FABISP to my USB and then ran "lsusb" which shown all the devices connected to my PC. In the list my device is also showing in the name "Multiple Vendors USBtiny".That means it's working.
                                 </p>
+
+                                <img style="width: 60%; height: 60%;"src="assets/img/doc/week4/34.jpeg"/>
+
 
                                 <p><b>Blow the Reset fuse</b></p>
 
