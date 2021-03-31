@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Programming</title>
+    <link href="css/foundation.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/icon-fonts.css" rel="stylesheet" />
+    <link href="css/hover.css" rel="stylesheet" />
+    <link href="css/footer-bottom.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/color.css" rel="stylesheet" />
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <section id="main-content">
+
+            <!-- Main Page Content and Sidebar -->
+
+            <div class="row">
+
+                <!-- Main Blog Content -->
+                <div class="large-12 columns" role="content">
+
+                    <article>
+
+                        <h2><a href="#">Embedded Programming</a></h2>
+                        <p class="article_pub-date">By: Debasis Parida on:
+                            <time datetime="2021-02-13" pubdate="">Mar 31 2021</time>
+                        </p>
+
+                        <div class="row">
+                            <div class="large-12 columns">
+                               
+                                <p>
+                                  This week's assignment is on Embedded Programming, which is very closer to my interest as it is my hobby area.In this week, i had to try multiple microcontroller's programming along with their architecture. I am planning to program Arduino, ATmega16 and explore some of their functionalities such as Digital I/O, PWM etc.</p>
+
+                                <p><b>Programming an Arduino </b></p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week8/1.jpg" />
+                            </div>
+
+                            <div class="large-12 columns">
+
+                                <p>
+                                 Arduino is an open hardware development board based on ATmega328P microcontroller that can be used by Innovators, hobbyists, and makers to design and build devices that interact with the real world.Arduino contains a number of different parts and interfaces together on a single circuit board including Digital I/O pins, Analog input pins, PWM pins etc.
+
+                                 <p><b>Arduino Pinout:</b></p>
+
+                                 <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week8/2.PNG" />
+                               </div>
+
+                               <div class="large-12 columns">
+
+                                  <p><b>Specifications of Arduino UNO:</b></p>
+
+                                  <ul>
+
+                                  <li>Microcontroller: Microchip ATmega328P</li>
+                                  <li>Operating Voltage: 5V DC</li>
+                                  <li>Input Voltage: 7 to 20 Volts</li>
+                                  <li>Digital I/O Pins: 14 (of which 6 can provide PWM output)</li>
+                                  <li>Analog Input Pins: 6</li>
+                                  <li>DC Current per I/O Pin: 20 mA</li>
+                                  <li>DC Current for 3.3V Pin: 50 mA</li>
+                                  <li>Flash Memory: 32 KB of which 0.5 KB used by bootloader</li>
+                                  <li>SRAM: 2 KB,EEPROM: 1 KB</li>
+                                </ul>
+                                <h3>Programming Arduino for Digital I/O:</h3>
+                            </div>
+                            
+                                <div class="large-12 columns">
+
+                                  <p>In this section we will program the Arduino to give digital output in different pins.As per circuit diagram we have connected two LEDs with two current limiting resistors in pin 12 and 11 respectively. So i need to program it to Turn ON both the LEDs, Turn ON/OFF at specific delay intervals etc.</p>
+
+                                	<img style="width: 30%; height: 30%;"class="float-left" src="assets/img/doc/week8/3.png" />
+                                </div>
+
+                                <div class="large-12 columns">
+
+                                  	<p>So first of all, i need to download Arduino IDE which open source to download then i need to launch it.To glow both the LEDs i need to give digital High to both the pins.The code to do the same is shown as below:</p>
+
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/5.PNG" />
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                    <p>To upload the code, connect the Arduino to PC using the USB cable, then in Arduino IDE compile the code using the "verify/compile" option under sketch.If it is compiled successfully, then select the port number from Tools menu as shown in the figure and Click on "Upload", and it should upload the code to Arduino showing uploaded successfully.</p>
+
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/6.PNG" />
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/7.jpeg" />
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>Now to use delay in between the glowing time of LEDs we need to change the code a bit.This is shown as below:</p>
+
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/8.PNG" />
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/9.gif" />
+
+                                  </div>
+
+                              <a href="index.html">Back to Home</a>
+
+                        
+                    </article>
+
+                    <hr />
+
+</body>
+
+</html>
