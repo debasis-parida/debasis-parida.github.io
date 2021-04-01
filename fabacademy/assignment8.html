@@ -41,7 +41,7 @@
                                 <p>
                                   This week's assignment is on Embedded Programming, which is very closer to my interest as it is my hobby area.In this week, i had to try multiple microcontroller's programming along with their architecture. I am planning to program Arduino, ATmega16 and explore some of their functionalities such as Digital I/O, PWM etc.</p>
 
-                                <p><b>Programming an Arduino </b></p>
+                                <h3>Programming an Arduino </h3>
 
                                 <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week8/1.jpg" />
                             </div>
@@ -93,7 +93,7 @@
 
                                     <p>To upload the code, connect the Arduino to PC using the USB cable, then in Arduino IDE compile the code using the "verify/compile" option under sketch.If it is compiled successfully, then select the port number from Tools menu as shown in the figure and Click on "Upload", and it should upload the code to Arduino showing uploaded successfully.</p>
 
-                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/6.png" />
+                                    <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/6.PNG" />
                                     <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/7.jpeg" />
                                   </div>
 
@@ -104,6 +104,81 @@
                                     <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/8.PNG" />
                                     <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/9.gif" />
 
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>Then i had used two buttons with Arduino two test for Digital inputs and LEDs to glow when buttons are pressed. The Circuit diagram and code to the project are shown below:</p>
+
+                                  	<img style="width: 40%; height: 40%;"class="float-left" src="assets/img/doc/week8/4.png" />
+
+                                  	<img style="width: 50%; height: 50%;"class="float-right" src="assets/img/doc/week8/9.png" />
+                                  	<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/17.gif" />
+
+                                  </div>
+
+                                  <h3>Programming AVR Microcontroller:</h3>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>AVR microcontrollers are very popular in product lines for their RISC architectures and efficient feactures. In this week, i have used ATmega16 microcontroller to explore some of it's functionality. I had an ATmega16 development board and USPASP programmer using which i have done all the programmings. The pin diagrams and the other details are given below:</p>
+
+                                  	<img style="width: 40%; height: 40%;"class="float-left" src="assets/img/doc/week8/10.png" />
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>The AVR microcontrollers are based on the advanced RISC architecture and consist of 32 x 8-bit general purpose working registers. Within one single clock cycle, AVR can take inputs from two general purpose registers and put them to ALU for carrying out the requested operation, and transfer back the result to an arbitrary register. The ALU can perform arithmetic as well as logical operations over the inputs from the register or between the register and a constant. Single register operations like taking a complement can also be executed in ALU. The features of ATmega16 are given below:</p>
+
+                                  	<ul>
+                                  		<li>16KB of Flash memory</li>
+                                  		<li>1KB of SRAM</li>
+                                  		<li>512 Bytes of EEPROM</li>
+                                  		<li>Available in 40-Pin DIP</li>
+                                  		<li>8-Channel 10-bit ADC</li>
+                                  		<li>Two 8-bit Timers/Counters</li>
+                                  		<li>One 16-bit Timer/Counter</li>
+                                  		<li>4 PWM Channels</li>
+                                  		<li>In System Programmer (ISP)</li>
+                                  		<li>Serial USART interface</li>
+                                  	</ul>
+                                  </div>
+                                  <h3>Programming AVR Microcontroller for digital IO:</h3>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>First i started with digital output with ATmega16. Here i have used AVR studio4 as IDE and Sinaprog Hex downloader to burn the code into the microcontroller.The connection diagram for digital output is very simillar to Arduino which is shown below:</p>
+
+                                  	<img style="width: 40%; height: 40%;"class="float-left" src="assets/img/doc/week8/15.bmp" />
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>First of all in AVR studio4 a new project was created and the code for glowing all the LEDs in ATmega16 is written in as shown below:</p>
+
+                                  	<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week8/11.png" />
+                                  	<img style="width: 45%; height: 45%;"class="float-right" src="assets/img/doc/week8/12.png" />
+
+                                  </div>
+
+                                  <div class="large-12 columns">
+
+                                  	<p>Then, compile the code in AVR studio 4 and after successful compilation, a hex code must be created in the project directory which needs to be burned to the microcontroller for which i used Sinaprog hex downloader software which is shown below:</p>
+
+                                  	<img style="width: 50%; height: 50%;"class="float-left" src="assets/img/doc/week8/13.png" />
+                                  	<img style="width: 40%; height: 40%;"class="float-right" src="assets/img/doc/week8/15.png" />
+
+                                  </div>
+                                  <div class="large-12 columns">
+                                  	<p>Now its time to test the Timer delay function in ATmega16. Unlike Arduino, here i have tried some new things which is LED chaser using For loop which is shown below.</p>
+                                  	<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/14.png" />
+                                  	<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/16.gif" />
+                                  </div>
+
+                                  <div class="large-12 columns">
+                                  	<p>Finally, to test the digital input, i took two Momentary Push Buttons and connected them to ATmega16 in PORTA, and Connected two LEDs to PORTC simillar to Arduino. Now the code to read the Button values are shown below.</p>
+                                  	<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/18.png" />
+                                  	<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week8/19.gif" />
                                   </div>
 
                               <a href="index.html">Back to Home</a>
