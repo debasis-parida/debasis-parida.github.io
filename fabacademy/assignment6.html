@@ -93,7 +93,7 @@
                                 <div class="large-12 columns">
 
                                 <p>
-                                After completion of the PCB design now we have to mill it using SRM20 PCB milling machine.For that, i exported the PCB design create in EAGLE with only buttom layer, drills and vias selected to PNG. Then i edited it in GIMP to find the trace and cut files as follows.
+                                After completion of the PCB design now we have to mill it using SRM20 PCB milling machine.For that, i exported the PCB design create in EAGLE with only buttom layer, drills and vias selected to PNG. Then i edited it in GIMP to find the trace and cut files as follows.Another thing to take care of is to take mirrior of the images, as here we are using the bottom layer of PCB.
                                 </p>
 
 
@@ -101,6 +101,86 @@
                                 <img style="width: 25%; height: 25%;"class="float-left" src="assets/img/doc/week6/9.png" />
 
                               </div>
+
+                              <div class="large-12 columns">
+
+                                <p>
+                                Then the files are milled using our SRM20 PCB milling machine.The final PCB after completion of Task is shown as below.
+                                </p>
+
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/11.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/12.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/13.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/14.jpeg" />
+
+                              </div>
+
+                              <div class="large-12 columns">
+
+                                <p>
+                                Now it's time to place all the components on PCB as per the schematic diagram. I had all the components required for the PCB which i soldered on the board as shown below:
+                                </p>
+
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/15.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/16.jpeg" />
+
+                              </div>
+
+                              <div class="large-12 columns">
+
+                                <p>
+                                As shown above, all the components are soldered and now i have leveled the PCB for my reference.Here the slider switch is used to change the mode between General mode and Programming mode.The push button is used to Reset the WiFi module.Also the Wifi module is mounted on the Female header as shown below.
+                                </p>
+
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/17.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/18.jpeg" />
+
+                              </div>
+
+                              <div class="large-12 columns">
+
+                              <h3>Programming the Board</h3>
+
+                               <p>
+                                Now,to program the board, i have used a USB-TTL converter module shown below. The connection between the USB-TTL converter and WiFi module is shown below. Make sure to put the board in programming mode using the slider switch.Now connect both the boards as per instructions below:
+
+                                <ul>
+                                    <li>USB-TTL(VCC)- ESP01 BOARD (VCC)</li>
+                                    <li>USB-TTL(GND)- ESP01 BOARD (GND)</li>
+                                    <li>USB-TTL(TX)- ESP01 BOARD (RX)</li>
+                                    <li>USB-TTL(RX)- ESP01 BOARD (TX)</li>
+                                </ul>
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/19.jpeg" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/20.jpeg" />
+
+                              </div>
+
+                              <div class="large-12 columns">
+
+                               <p>
+                                Open Arduino IDE, From Examples select LED blinking code and From Tools, select ESP8266 Module as board.The compile the sketch. If it is compiled successfully then upload the sketch.
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/21.png" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week6/22.png" />
+
+                              </div>
+
+                              <div class="large-12 columns">
+
+                               <p>
+                                After successfully uploding, switch the board into General mode using the slider switch. Then press the reset button.Now, the LED on the board should blink as shown below.
+                                </p>
+
+                                <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week6/23.gif" />
+
+                              </div>
+
 
                               <a href="index.html">Back to Home</a>
 
