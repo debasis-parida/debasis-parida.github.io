@@ -32,7 +32,7 @@
 
                         <h2><a href="#">Computer Controlled Machining</a></h2>
                         <p class="article_pub-date">By: Debasis Parida on:
-                            <time datetime="2021-02-13" pubdate="">Mar 15 2021</time>
+                            <time datetime="2021-02-13" pubdate="">Mar 30 2021</time>
                         </p>
 
                         <div class="row">
@@ -112,7 +112,7 @@
                                   	<p>A 60° or 90° V-bit is great for what’s called V-carving, in which the tip of a V-shaped bit is used to cut into narrow spaces, and the wide bottom is used to cut into larger spaces. V-bits can also create sharp corners that other end mills cannot because of their radiuses.</p>  
 
                                   	<img style="width: 25%; height: 25%;"class="float-left" src="assets/img/doc/week7/9.jpg" />
-                                <img style="width: 20%; height: 20%;"class="float-left" src="assets/img/doc/week7/10.JPG" /> 
+                                <img style="width: 20%; height: 20%;"class="float-left" src="assets/img/doc/week7/10.jpg" /> 
 
                               </div>
 
@@ -178,12 +178,95 @@
                                   <div class="large-12 columns">
 
                                   	<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/14.jpeg" />
+
                                   </div>
+
+                                  <div class="large-12 columns">
 
                                   <li><b>Note:</b> In case of any emergency stop, the machine forgets its previous axes. So to avoid it, we have to note down the X, Y, Z position of the job before setting it to Origin. Using so, we can recover our previous job.</li>
                                 </ul>
 
+                              </div>
+
+                              <div class="large-12 columns">
+                                <h3>Fitting Test:</h3>
+                                <p>
+                                  First, we tried to test some basic characteristics of CNC router like Kerf, Fitting test etc. So, first we took a simple rectangle to test the fitting and what we did is, we cut the inner part of the rectangle as "Outcut" separately and then again for the slot, we cut the design in "incut", so that the rectangle will fit into the slot perfectly. After cutting them separately we fitted them as shown below and it fits perfectly as expected.
+                                  <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/28.jpeg" />
                                 </p>
+                              </div>
+
+                              <div class="large-12 columns">
+                                <h3>Kerf Test:</h3>
+                                <p>
+                                  After the fitting test, we followed the procedure which we followed in Laser cutting to determine the kerf. We designed a tool with multiple slots considering many tolerance options near to the width of material available with us and then cut it using "oncut". Then we found the kerf as shown below:
+
+                                  as shown in the image the material width is 11.54 mm and the slot where the material is best fitted is 8.25 mm. Hence we found in "Oncut", the kerf is found to be 3.2 mm.That means the end mill is milling out 1.6 mm from both the sides.
+                                  </p>
+
+                                  <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/29.jpeg" />
+                                  <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/30.jpeg" />
+                                
+                              </div>
+
+
+                              <div class="large-12 columns">
+                                <h3>Designing a Toolbox:</h3>
+                                <p>
+                                  First, i throught of making a Wooden tool box which is very much required for our Fablab to place miscellenous components.So i started designing it using Fusion360 as shown in the images below:
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/18.png" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/17.png" />
+                              </div>
+
+                              <div class="large-12 columns">
+                                <p>
+                                  Here one thing to note that, i have changes the material type in Appearance menu under "Preference". So, the material here looks like a plywood.Then i made the side sketches also in the simillar fashion and mirriored it on the other side.
+
+                                  Here i have used the parametric modelling in Fusion360. hence, i can change the design parameters using a simple sheet as shown below:
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/19.png" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/20.png" />
+                              </div>
+
+                              <div class="large-12 columns">
+                                <p>
+                                 After completion of the two sides, now i placed the remaining two faces to complete the Box structure as shown:
+                                </p>
+
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/21.png" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/22.png" />
+                              </div>
+
+                              <div class="large-12 columns">
+
+                                <p>
+                                 The box design after placing all the faces looks like below:
+                                </p>
+                                <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/23.png" />
+                              </div>
+
+                               <div class="large-12 columns">
+
+                                <p>
+                                 Now time to place two slots in the two sides of the box in order to carry the box. For this i used the slot feature of Fusion 360 and mirriored it after extruding the slot.Finally the model looks like below:
+                                </p>
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/24.png" />
+                                <img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week7/25.png" />
+
+                                <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/26.png" />
+                              </div>
+
+                              <div class="large-12 columns">
+                                <h4>Exporting to .dxf for Cutting:</h4>
+
+                                <p>
+                                 Finally, i had to export the model to a .dxf file, which is basically a 2d sketch file, which can be opened with Vcarve pro software to generate the machine code file for CNC cutting.To export, first of all i layed all the bodies of design in a single plane and then projected them into a single sketch. Then i exported the sketch into a dxf file.
+                                </p>
+                            
+                                <img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week7/27.png" />
 
                               </div>
 
