@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Input Devices</title>
+	<link href="css/foundation.css" rel="stylesheet" />
+	<link href="css/header.css" rel="stylesheet" />
+	<link href="css/icon-fonts.css" rel="stylesheet" />
+	<link href="css/hover.css" rel="stylesheet" />
+	<link href="css/footer-bottom.css" rel="stylesheet" />
+	<link href="css/menu.css" rel="stylesheet" />
+	<link href="css/blog.css" rel="stylesheet" />
+	<link href="css/fonts.css" rel="stylesheet" />
+	<link href="css/color.css" rel="stylesheet" />
+	<script src="js/modernizr.js"></script>
+</head>
+
+<body>
+	<div class="content-wrapper">
+		<section id="main-content">
+
+			<!-- Main Page Content and Sidebar -->
+
+			<div class="row">
+
+				<!-- Main Blog Content -->
+				<div class="large-12 columns" role="content">
+
+					<article>
+
+						<h2><a href="#">Input Devices</a></h2>
+						<p class="article_pub-date">By: Debasis Parida on:
+							<time datetime="2021-02-13" pubdate="">Apr 11 2021</time>
+						</p>
+
+						<div class="row">
+							<div class="large-12 columns">
+
+								<p>
+									This week's assignment i had to use a sensor to a microcontroller board that i designed and read the sensor signal. In Group assignment, we had to probe a sensor's analog and digital signals and analyse them.
+
+								This week, i have used an Ultrasonic sensor to read the analog values and measure the distance.</p>
+								<p>
+
+									<b>Components required:</b>
+									<ul>
+										<li>Arduino UNO</li>
+										<li>ATtiny44</li>
+										<li>HCSR04 Ultrasonic sensor</li>
+										<li>LED</li>
+										<li>Jumpers</li>
+										<li>20MHz Crystal Oscillator</li>
+										<li>10K Resistor</li>
+										<li>ISP Headers</li>
+
+									</ul>
+								</p>
+
+								<h4>Designing a Microcontroller board:</h4>
+							</div>
+
+							<div class="large-12 columns">
+
+								<h5>Designing the schematic:</h5>
+
+								<p>
+									First of all i have designed the schematic digram for the ATtiny44 microcontroller board.I have used Eagle for designing the Schematic and PCB board layout.The schematic digram of the board is shown below:
+								</p>
+
+								<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/1.PNG" />
+								<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/2.PNG" />
+
+							</div>
+
+							<div class="large-12 columns">
+
+								<p>
+									Now, after routing of all the components as per the connection diagram, the board looks something like shown below.This board is now exported to PNG for milling in SRM20.
+								</p>
+
+								<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/4.PNG" />
+								<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/3.PNG" />
+
+							</div>
+							<div class="large-12 columns">
+
+								<h5>PCB Milling in SRM20:</h5>
+
+								<p>
+									After successful completion of PCB design,the designed files are milled in SRM20 using the procedures which we have done in past week assignments.The final PCB after milling looks like below:
+								</p>
+
+								<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/6.jpeg" />
+								<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/7.jpeg" />
+							</div>
+							<p>
+								Now, after soldering the components in the PCB, the soldered PCB looks like below:
+							</p>
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/8.jpeg" />
+						</div>
+
+						<div class="large-12 columns">
+
+							<h4>Testing Ultrasonic sensor with Arduino:</h4>
+
+							<p> Ultrasonic sensor is an electronic device that measures the distance of a target object by emitting ultrasonic sound waves, and converts the reflected sound into an electrical signal. Ultrasonic waves travel faster than the speed of audible sound (i.e. the sound that humans can hear). Ultrasonic sensors have two main components: the transmitter (which emits the sound using piezoelectric crystals) and the receiver (which encounters the sound after it has travelled to and from the target).
+
+							In order to calculate the distance between the sensor and the object, the sensor measures the time it takes between the emission of the sound by the transmitter to its contact with the receiver. The formula for this calculation is D = ½ T x C (where D is the distance, T is the time, and C is the speed of sound ~ 343 meters/second). </p>
+
+							<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/10.jpg" />
+
+							<img style="width: 30%; height: 30%;"class="float-right" src="assets/img/doc/week10/9.PNG" />
+						</div>
+
+						<div class="large-12 columns">
+
+							<p>Now i connected the Ultrasonic sensor with Arduino UNO as per the connection given below.The code to print the distance in the serial monitor is also given below:</p>
+							<ul>
+								<li>Ultrasonic Pin VCC- Arduino Pin -5V</li>
+								<li>Ultrasonic Pin GND- Arduino Pin -GND</li>
+								<li>Ultrasonic Pin ECHO- Arduino Pin -9</li>
+								<li>Ultrasonic Pin TRIG- Arduino Pin -10</li>
+							</ul>
+
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/11.PNG" />
+						</div>
+						<div class="large-12 columns">
+
+							<p>Now, after uploading the code in Arduino, the output can be seen in the serial monitor and also in serial plotter as shown below:</p>
+
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/12.PNG" />
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/13.PNG" />
+
+						</div>
+
+						<div class="large-12 columns">
+
+							<p>After testing in Arduino, i had to test it with my design microcontroller board.Hence i connected the Ultrasonic sensor to the board using my GPIO header and connected the ISP header with Arduino ISP connector as shown in the figure below.Also i need to connect a 10uf capacitor between Arduino's Reset and gnd pin to prevent arduino from resetting.</p>
+
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/14.jpeg" />
+
+						</div>
+
+						<div class="large-12 columns">
+
+							<p>Now to code ATtiny44 using Arduino IDE, I had followed some procedures to add ATtiny44 boards in Arduino IDE.First in the preferences of Arduino IDE i typed "<b>https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</b>". From the Arduino IDE go to Tools--> Board-->Boards Manage. A new tab will open and at the top of the tab type: attiny, Select Install on the "Attiny by David. A Mellis".After completion of installation, restart the Arduino IDE. Now i could see Attiny boards in my boards list.</p>
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/15.PNG" />
+						</div>
+						<div class="large-12 columns">
+
+							<p>Now to program attiny44, follow the steps below:</p>
+							<ul>
+								<li>In the Arduino IDE select File-->Examples--> 11. Arduino ISP-->ArduinoISP,the ISP sketch should open and upload it to your Arduino Uno</li>
+								<li>Connect the ISP pins of Arduino with Attiny44.In my case only change i did is, i connected pin 10 of arduino to RST of ISP, as i got an error in bootloading.</li>
+								<li>Go to Tools -> Board scroll to the bottom select ATtiny24/44/84. Under Tools -> Processor--> 8 MHz (internal).Under Tools-->Programmer-->Arduino as ISP.</li>
+								<li>Check that all wiring, capacitor, and board selections are correct.Finally select Burn Bootloader.After sometime it will show "Done burning bootloder".Now our ATtiny44 is ready to program using Arduino IDE.</li>
+							</ul>
+
+							<p>In the next step, I made some changes in the code as per the design of Microcontroller board and pin mapping of ATtiny44 with Arduino UNO.The image i referred is given below:</p>
+
+							<img style="width: 60%; height: 60%;"class="float-left" src="assets/img/doc/week10/16.png" />
+						</div>
+						<div class="large-12 columns">
+							<p>The final code is shown below, in which i connected a LED to glow, when there is an obstacle in front of it.</p>
+							<img style="width: 45%; height: 45%;"class="float-left" src="assets/img/doc/week10/17.PNG" />
+
+						</div>
+
+						<div class="large-12 columns">
+
+							<p>Finally, after successful uploading of code into my board, i tested the working of the ultrasonic sensor which was working as expected as shown in the video below.</p>
+
+							<video width="640" height="480" controls muted>
+								<source src="assets/img/doc/week10/test.mp4" type="video/mp4" >
+								</video>
+
+							</div>
+
+							<a href="index.html">Back to Home</a>
+
+
+						</article>
+
+						<hr />
+
+					</body>
+
+					</html>
